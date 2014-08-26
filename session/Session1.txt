@@ -1,0 +1,23 @@
+- downloading/installing R
+- finding development data
+- finding household surveys 
+- intro to R (reading data in: dta, csv, putting in directly)
+
+- What countries are you thinking of investigating?
+- what led you toward that country?
+- what types of data do you think will be easy to find?
+- what types of data do you think will be harder to find? 
+
+- what's the modern equivalent of Orshansky's "low cost" and "economy plans" (3.60 and 2.80)?
+- how realistic does that seem to you?
+- Orshansky's concern was that people get enough food. These days, the poor in America are often obese. What is the relationship between poverty and nutrition in your country of interest? 
+- what do you think of Orshansky's method of computing the poverty line? What problems could arise in this series of calculations?
+- do you agree with the author that there's "no definitive way to decide who's impoverished and who isn't?" (P 7)
+- what evidence does the author give that poor health is a consequence of poverty? How could poor health also cause poverty? How does this relate to Collier's argument (poverty traps)?
+- what are the disadvantages of using a relative cutoff for the poverty line? (The number you choose defines how many are in poverty)
+
+- what two groups does collier identify as the deniers of the poverty problem? What is the development biz group? What is the development buzz group? 
+- what four poverty traps does collier identify? (Conflict, natural resources, landlocked w bad neighbors, bad governance)
+- how does poverty and the four traps relate to the quality of data available from a country? (P9, discuss endogeneity)
+
+The olshansky reading talks about poverty at the individual level, while collier discusses it at the national level. What characteristics do the two levels share? Where do they differ? Which solutions at one level might fail at the other? 
