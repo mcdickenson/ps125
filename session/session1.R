@@ -117,3 +117,96 @@ library(gdata)
 xlsdata = read.xls("usgdp.xls")
 head(xlsdata)
 tail(xlsdata)
+
+###############
+
+# Exploratory data analysis
+
+data = csvdata
+colnames(data) = c("year", "gdp", "pop", "spend") 
+head(data)
+head(csvdata)
+
+summary(data)
+# similar:
+# min(data$gdp)
+# quantile(data$gdp, 0.25)
+# median(data$gdp)
+# mean(data$gdp)
+# quantile(data$gdp, 0.75)
+# max(data$gdp)
+
+
+### scatterplots
+
+plot(data$year, data$gdp)
+
+# pdf("myplot.pdf", height=4, width=4)
+plot(x=data$year, y=data$gdp,
+  # xlab="Year", ylab="$US (bn)",
+  # type="l",
+  # lwd=2,
+  # col="blue",
+  # xlim=c(1950, 1960),
+  # ylim=c(0,500)
+)
+# lines(x=data$year, y=data$spend,
+#   type="o", 
+#   pch=16,
+#   lwd=2,
+#   col="green"
+# )
+# points(x=data$year, y=data$pop,
+#   cex=2
+# )
+# title("US GDP", col.main="red")
+# legend("topleft", 
+#   legend=c("GDP", "Spending"),
+#   pch=16,
+#   col=c("blue", "green")
+# )
+# dev.off()
+
+### barplot
+barplot(data$gdp)
+barplot(as.matrix(data),
+  beside=TRUE,
+  col=rainbow(10)
+)
+
+### histogram
+hist(data$pop)
+
+### pie chart
+pie(data$gdp,
+  labels=data$year
+)
+
+### misc
+# 25 different symbols to use in your charts
+
+# Make an empty chart
+plot(1, 1, xlim=c(1,5.5), ylim=c(0,7), type="n", ann=FALSE)
+
+# Plot digits 0-4 with increasing size and color
+text(1:5, rep(6,5), labels=c(0:4), cex=1:5, col=1:5)
+
+# Plot symbols 0-4 with increasing size and color
+points(1:5, rep(5,5), cex=1:5, col=1:5, pch=0:4)
+text((1:5)+0.4, rep(5,5), cex=0.6, (0:4))
+
+# Plot symbols 5-9 with labels
+points(1:5, rep(4,5), cex=2, pch=(5:9))
+text((1:5)+0.4, rep(4,5), cex=0.6, (5:9))
+
+# Plot symbols 10-14 with labels
+points(1:5, rep(3,5), cex=2, pch=(10:14))
+text((1:5)+0.4, rep(3,5), cex=0.6, (10:14))
+
+# Plot symbols 15-19 with labels
+points(1:5, rep(2,5), cex=2, pch=(15:19))
+text((1:5)+0.4, rep(2,5), cex=0.6, (15:19))
+
+# Plot symbols 20-25 with labels
+points((1:6)*0.8+0.2, rep(1,6), cex=2, pch=(20:25))
+text((1:6)*0.8+0.5, rep(1,6), cex=0.6, (20:25))

@@ -1,5 +1,10 @@
 # Session 1
 
+## Announcements
+
+- Duke Data Services [workshops](http://library.duke.edu/data/news)
+- "Intro to R" on Sep 16, 1pm, may be of particular interest
+
 ## R
 
 ### Downloading and Installing
