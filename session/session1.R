@@ -10,11 +10,13 @@
 print("Hello world")
 
 # How to get help
+help(print)
 help(sqrt) # help w/ functions
-?sqrt # same thing
+?sqrt # same thing?
+?print
 help.start() # lots of help
 help.search("sqrt") # what am I looking for? Fuzzy matching
-example(sqrt)
+example(print)
 
 # Setting a variable
 x = 1
@@ -29,6 +31,7 @@ vector + 1
 vector * 2
 
 # Other ways to create vectors
+c(1, 1, 1, 1, 1)
 rep(1, 5) # repeate the value 1, 5 times
 seq(1, 21, by=2) # make the sequence 1 to 21 moving by increments of 2
 rep(seq(2,20, by=2), 2) # repeate the pattern 2, 4, ... 20, twice
@@ -41,6 +44,7 @@ print(mx)
 mx[1,1]
 mx[1, ]
 mx[ ,1]
+mx[3,2]
 
 my = matrix(c(1,2,3,4,5,6,7,8,9), nrow=3, ncol=3, byrow=TRUE)
 ?matrix
@@ -53,13 +57,18 @@ mx[ ,1]
 dfx = as.data.frame(mx)
 colnames(dfx)
 rownames(dfx)
+print(dfx)
 
 dfy = as.data.frame(my)
 colnames(dfy)
 rownames(dfy)
+print(dfy)
 
 colnames(dfy) = c("first", "second", "third")
 rownames(dfy) = c("row1", "row2", "row3")
+dfy["row1","second"]
+dfy[, "second"]
+dfy$second
 
 dfy$fourth = c(0, 0, 0) # add a column
 dfy$fifth = dfy$first + dfy$third
@@ -73,6 +82,7 @@ print(dfy)
 sum(dfy$second)
 mean(dfy$second)
 median(dfy$second)
+summary(dfy$second)
 
 sum(dfy["row1",])
 mean(dfy["row1",])
